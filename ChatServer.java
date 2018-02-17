@@ -22,6 +22,6 @@ public class ChatServer{
 	}
 
 	public static void main (String args[]) throws IOException{
-		new ChatServer (1234);
+		new ChatServer (9090);
 	}
 }

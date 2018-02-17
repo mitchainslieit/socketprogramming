@@ -63,6 +63,6 @@ public class ChatClient{
 	public static void main (String args[]) {
 		System.out.println ("Enter user name: ");
 		String name = ConsoleIn.readlnWord();
-		ChatClient c = new ChatClient (name, "127.0.0.1", 1234);
+		ChatClient c = new ChatClient (name, "127.0.0.1", 9090);
 	}
 }
