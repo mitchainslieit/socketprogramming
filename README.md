@@ -1,2 +1,2 @@
 # socketprogramming
-THE FUCKKKKKK
+A little bit of programming, activity 3
