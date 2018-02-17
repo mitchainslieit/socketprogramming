@@ -13,4 +13,8 @@ public class SocketServer {
         
     }
     
+    public static void method1() {
+        
+    }
+    
 }
