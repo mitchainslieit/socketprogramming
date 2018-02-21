@@ -4,7 +4,12 @@ public class GossipClient
 {
   public static void main(String[] args) throws Exception
   {
+<<<<<<< HEAD
      Socket sock = new Socket("192.168.5.196", 3000);
+=======
+     InetAddress address = InetAddress.getByName("192.l68.5.196");
+     Socket sock = new Socket(address, 3000);
+>>>>>>> f44a4c4b48886d4d236d8236442b49e87dc4a2d3
                                // reading from keyboard (keyRead object)
      BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));
                               // sending to client (pwrite object)
