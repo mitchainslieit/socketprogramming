@@ -23,8 +23,8 @@ public class ServerS {
 			sock = newSocket.accept();
 			System.out.println("A client has connected!");
 			print = new PrintWriter(sock.getOutputStream(), true);
+			receive2 = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 			while (true) {
-				receive2 = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 				out = receive2.readLine();
 				if (out != null) {
 					System.out.println("Client: " + out);
@@ -33,7 +33,7 @@ public class ServerS {
 				in = read.readLine();
 				print.println(in);
 				print.flush();
-				System.out.println("Waiting for reply...");
+				System.out.println("Waiting for Client's reply...");
 			}
 		} catch (IOException e) {
 			System.out.println(e.getMessage());

@@ -1,12 +1,12 @@
-import java.io.*;
-import java.net.*;
-
 /**
  * Description: This program allows both server and client to chat simultaneously using sockets.
  * @author GALATCHA, Mitch Ainslie V.
  * @author SALAZAR, Jerome Francis N.
  * @version 1.0, February 28, 2018
  */
+
+import java.io.*;
+import java.net.*;
 
 public class  ClientS{
 
@@ -21,16 +21,20 @@ public class  ClientS{
 			read = new BufferedReader(new InputStreamReader(System.in));
 			receive2 = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 			print = new PrintWriter(sock.getOutputStream(), true);
+			in = "Hello Server!";
+			print.println(in);
+			print.flush();
+			System.out.println("Waiting for Server's reply...");
 			while (true) {
+				out = receive2.readLine();
+				if (out!= null) {
+					System.out.println("Server: " + out);
+				}
 				System.out.print("Enter your chat: ");
 				in = read.readLine();
 				print.println(in);
 				print.flush();
 				System.out.println("Waiting for reply...");
-				out = receive2.readLine();
-				if (out!= null) {
-					System.out.println("Server: " + out);
-				}
 			}
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
