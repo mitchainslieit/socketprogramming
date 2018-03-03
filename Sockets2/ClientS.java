@@ -34,7 +34,7 @@ public class  ClientS{
 				in = read.readLine();
 				print.println(in);
 				print.flush();
-				System.out.println("Waiting for reply...");
+				System.out.println("Waiting for Server's reply...");
 			}
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
